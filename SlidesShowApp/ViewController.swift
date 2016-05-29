@@ -81,6 +81,11 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let secondViewController:SecondViewController = segue.destinationViewController as! SecondViewController
         secondViewController.image = imageViewSmall.image
+            timer?.invalidate();
+            go.hidden = false
+            back.hidden = false
+            play.setTitle("再生" , forState: UIControlState.Normal);
+        timer = nil
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {

@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="40" id="L27-hR-Dik"/>
                                     <constraint firstAttribute="width" constant="80" id="ohk-Yv-9xl"/>
                                 </constraints>
-                                <state key="normal" title="再生/停止">
+                                <state key="normal">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -70,9 +70,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-ux-i64">
                                 <rect key="frame" x="66" y="100" width="247" height="182"/>
                                 <connections>
-                                    <action selector="playstop" destination="BYZ-38-t0r" eventType="touchUpInside" id="G69-yQ-njc"/>
-                                    <action selector="tapStop" destination="BYZ-38-t0r" eventType="touchUpInside" id="MbD-ln-X6f"/>
-                                    <segue destination="Sfl-fS-sjX" kind="show" id="Tus-iT-gDC"/>
+                                    <segue destination="Sfl-fS-sjX" kind="show" id="90y-Ia-kpN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,7 +90,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="back" destination="hDZ-qe-gVS" id="oQD-JT-a2d"/>
+                        <outlet property="go" destination="Xae-17-M2F" id="DbF-zN-XgS"/>
                         <outlet property="imageViewSmall" destination="PSB-3p-v23" id="Gvh-fp-Ggt"/>
+                        <outlet property="play" destination="OCT-G5-45Q" id="HV9-Pm-Y6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

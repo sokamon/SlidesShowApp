@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        play.setTitle("再生" , forState: UIControlState.Normal);
     }
     
     let img1: UIImage = UIImage(named:"image1.jpg")!
@@ -50,16 +50,26 @@ class ViewController: UIViewController {
         tapGo()
     }
     
+    @IBOutlet weak var go: UIButton!
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var play: UIButton!
+    
     @IBAction func tapPlay() {
         
         // タイマーが動いていない時にタイマー開始
         if timer == nil {
             timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.time) , userInfo: nil, repeats: true);
+            go.hidden = true
+            back.hidden = true
+            play.setTitle("停止" , forState: UIControlState.Normal);
         } else {
             timer?.invalidate();
+            go.hidden = false
+            back.hidden = false
+            play.setTitle("再生" , forState: UIControlState.Normal);
         timer = nil
-            
         }
+        
     }
     
     
